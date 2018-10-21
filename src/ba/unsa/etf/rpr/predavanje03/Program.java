@@ -17,13 +17,16 @@ public class Program {
               predmeti[br_predmeta]=new Predmet(naziv,sifra,max);
               br_predmeta++;
             }
+            break;
             case 2:{
                 System.out.println("Unesite ime, prezime i broj indeksa.");
                 String ime=ulaz.nextLine();
                 String prezime=ulaz.nextLine();
                 int br=ulaz.nextInt();
                 studenti[br_studenata]=new Student(ime,prezime,br);
+                br_studenata++;
             }
+            break;
             case 3:{
 
             }
