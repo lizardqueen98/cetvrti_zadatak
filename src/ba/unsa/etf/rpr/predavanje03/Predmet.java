@@ -52,4 +52,7 @@ public class Predmet {
     public Student[] getNiz(){
         return niz;
     }
+    public void ispisSpisakStudenata(){
+        for(int i=0;i<br_upisanih;i++) System.out.println(niz[i]);
+    }
 }

@@ -34,4 +34,7 @@ public class Student {
     public int getBroj_indeksa() {
         return broj_indeksa;
     }
+    public  String toString(){
+        return prezime + " " + ime + " (" + broj_indeksa + ")";
+    }
 }
