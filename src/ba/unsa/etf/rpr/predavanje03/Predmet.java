@@ -53,6 +53,9 @@ public class Predmet {
         return niz;
     }
     public void ispisSpisakStudenata(){
-        for(int i=0;i<br_upisanih;i++) System.out.println(niz[i]);
+        for(int i=0;i<br_upisanih;i++) {
+            System.out.print(i+1+". ");
+            System.out.println(niz[i]);
+        }
     }
 }
