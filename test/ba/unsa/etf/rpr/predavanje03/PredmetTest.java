@@ -5,6 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PredmetTest {
+    @Test
+    void testKonstruktora(){
+        assertThrows(RuntimeException.class,()->{new Predmet("Matematika",1,-5);});
+    }
 
     @Test
     void upisi() {

@@ -16,10 +16,16 @@ class StudentTest {
 
     @Test
     void setIme() {
+        Student s=new Student("Nadija", "Borovina", 18033);
+        s.setIme("Didi");
+        assertEquals("Didi",s.getIme() );
     }
 
     @Test
     void setPrezime() {
+        Student s=new Student("Nadija", "Borovina", 18033);
+        s.setPrezime("Micijevic");
+        assertEquals("Micijevic",s.getPrezime() );
     }
 
     @Test

@@ -5,7 +5,8 @@ public class Predmet {
     private String naziv_predmeta;
     private int sifra_predmeta,max_br_studenata, br_upisanih;
 
-    public Predmet(String naziv_predmeta, int sifra_predmeta, int max_br_studenata) {
+    public Predmet(String naziv_predmeta, int sifra_predmeta, int max_br_studenata) throws RuntimeException{
+        if(max_br_studenata<0) throw new RuntimeException("Maksimalan broj studenata ne moze biti mani od nule!");
         this.naziv_predmeta = naziv_predmeta;
         this.sifra_predmeta = sifra_predmeta;
         this.max_br_studenata = max_br_studenata;
