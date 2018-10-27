@@ -13,8 +13,16 @@ public class Predmet {
         niz = new Student[max_br_studenata];
         br_upisanih=0;
     }
-
+    public boolean upisan(Student s){
+        for(int i=0;i<br_upisanih;i++){
+            if(niz[i].getBroj_indeksa()==s.getBroj_indeksa()) return true;
+        }
+        return false;
+    }
     public void upisi(Student s){
+
+            if(upisan(s)) throw new IllegalArgumentException("Student je vec upisan");
+
         if(br_upisanih<max_br_studenata) {
             niz[br_upisanih] = new Student(s);
             br_upisanih++;
@@ -22,7 +30,8 @@ public class Predmet {
 
     }
 
-    public void ispisi(Student s) {
+    public void ispisi(Student s) throws IllegalAccessException {
+        if(!upisan(s)) throw new IllegalAccessException("Student nije upisan");
         for(int i=0;i<br_upisanih;i++){
             if(s.getBroj_indeksa()==niz[i].getBroj_indeksa()){
                 for(int j=i;i<br_upisanih-1;j++){

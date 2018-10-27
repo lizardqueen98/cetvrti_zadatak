@@ -54,7 +54,13 @@ public class Program {
                         if (predmeti[i].getSifra_predmeta() == sifra) {
                             for (int j = 0; j < br_studenata; j++) {
                                 if (studenti[j].getBroj_indeksa() == ind) {
-                                    predmeti[i].ispisi(studenti[j]);
+                                    try {
+                                        predmeti[i].ispisi(studenti[j]);
+                                    }
+                                    catch(IllegalAccessException e){
+                                        System.out.println(e.getMessage());
+                                        break;
+                                    }
                                 }
                             }
                         }

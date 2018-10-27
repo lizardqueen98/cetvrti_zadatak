@@ -27,7 +27,7 @@ class StudentTest {
         s.setPrezime("Micijevic");
         assertEquals("Micijevic",s.getPrezime() );
     }
-
+    //Getere provjeravala u seterima
     @Test
     void getIme() {
     }
@@ -40,7 +40,9 @@ class StudentTest {
     void getBroj_indeksa() {
     }
 
-    /*@Test
-    void toString() {
-    }*/
+    @Test
+    void toStringTest() {
+        Student s =new Student("Nadija", "Borovina", 18067);
+        assertEquals("Borovina Nadija (18067)",s.toString());
+    }
 }

@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.predavanje03;
 
-public class Student {
+public class Student implements Cloneable{
     private String ime,prezime;
     private int broj_indeksa;
     public Student(String ime, String prezime, int broj_indeksa) {
@@ -8,10 +8,18 @@ public class Student {
         this.prezime = prezime;
         this.broj_indeksa = broj_indeksa;
     }
+    @Override
+    public Object clone() throws CloneNotSupportedException{
+        Student novi = (Student) super.clone();
+        novi.ime=new String(this.ime);
+        novi.prezime=new String(this.prezime);
+        novi.broj_indeksa=this.broj_indeksa;
+        return novi;
+    }
 
     public Student(Student s) {
-        ime=s.ime;
-        prezime=s.prezime;
+        ime=new String(s.ime);
+        prezime=new String(s.prezime);
         broj_indeksa=s.broj_indeksa;
     }
 
